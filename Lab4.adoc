@@ -41,7 +41,7 @@ int delay(int time)
 for(int j=0;j<1000;++j)//поскольку не рекомендуется использовать бесконечный цикл
  {
    *ptrPaODR ^= static_cast<uint32_t>(1 << 5);
-   *ptrPCODR ^= static_cast<uint32_t>((1 << 5) | (1 << 8) | (1 << 9));
+   *ptrPCODR ^= static_cast<uint32_t>((1 << 9) | (1 << 8) | (1 << 5));
    delay(1000000);
    *ptrPCODR ^= static_cast<uint32_t>((1 << 5) | (1 << 8) | (1 << 9));
    *ptrPaODR ^= static_cast<uint32_t>(1 << 5);
